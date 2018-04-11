@@ -1,1 +1,1 @@
-web: guincorn kiran-portfolio.wsgi 
+web: guincorn portfolio-project.wsgi 
