@@ -1,1 +1,0 @@
-web: guincorn portfolio-project.wsgi 

@@ -25,7 +25,7 @@ SECRET_KEY = '-z(a=uf!b!)_5vrzhz9k(=@z*@ka_v_0s%3tkm!ar6y-vf8m(#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['kiran-portfolio.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dfiqknub0g2b4e',
-        'USER': 'nyezhpsnihzrxa',
-        'PASSWORD': '0160adf19bb8d09af68c093e264daa45944ac82657d01ffc40374fccfb520a70',
-        'HOST':'ec2-54-204-21-226.compute-1.amazonaws.com',
+        'NAME': 'portfoliodb',
+        'USER':'postgres',
+        'PASSWORD':'kiran9933',
+        'HOST':'localhost',
         'PORT':'5432',
     }
 }
@@ -122,12 +122,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'portfolio/static/')
+]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 MEDIA_URL = '/media/'
